@@ -24,7 +24,7 @@ results/     Metrics/plots per model run, for side-by-side comparison
 ```
 
 ## Setup (local to install packages)
-## Setup (local to install packages)
+
 
 ```bash
 python -m venv venv
@@ -47,7 +47,6 @@ Then follow `data/README.md` to get the dataset onto disk.
 We **do not work directly on `main`**. `main` is always the clean and final version.
 
 
-### Workflow
 
 1. **Update `dev` before starting:**
 
@@ -59,7 +58,7 @@ We **do not work directly on `main`**. `main` is always the clean and final vers
 2. **Create your own branch from `dev`:**
 
    ```bash
-   git checkout -b yourname-feature
+   git checkout -b <your branch name>
    ```
 
    Examples: `arhan-cnn-training`, `arnob-data-prep`, `yolo-tuning`

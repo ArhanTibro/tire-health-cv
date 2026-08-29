@@ -8,8 +8,6 @@ and makes clones slow).
 
 ## Structure (as collected)
 
-## Structure (as collected)
-
 ```
 softcom_dataset/
     healthy/
