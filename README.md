@@ -24,6 +24,7 @@ results/     Metrics/plots per model run, for side-by-side comparison
 ```
 
 ## Setup (local to install packages)
+## Setup (local to install packages)
 
 ```bash
 python -m venv venv
