@@ -1,5 +1,6 @@
 # Dataset — stays in Drive/local only, never pushed to GitHub
 data/softcom_dataset/
+data/processed/
 
 # Trained models — usually too large for git
 *.pt
