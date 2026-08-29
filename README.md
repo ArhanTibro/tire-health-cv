@@ -23,7 +23,7 @@ configs/     YAML configs for each model (hyperparameters)
 results/     Metrics/plots per model run, for side-by-side comparison
 ```
 
-## Setup (local, RTX 3050 / any CUDA GPU)
+## Setup (local to install packages)
 
 ```bash
 python -m venv venv
@@ -33,12 +33,6 @@ pip install -r requirements.txt
 
 Then follow `data/README.md` to get the dataset onto disk.
 
-## Setup (Colab, no local GPU needed)
-
-1. Open the relevant notebook in `notebooks/` via Colab.
-2. Run the first cell (clones this repo + installs requirements).
-3. Mount Google Drive and point `DATA_DIR` at the shared dataset folder.
-4. Run the rest of the notebook — it calls the same `src/` code as local runs.
 
 ## Workflow
 
@@ -49,5 +43,51 @@ Then follow `data/README.md` to get the dataset onto disk.
 
 ## Team workflow
 
-- `main` stays stable. Work on a feature branch (`git checkout -b your-feature`), open a PR to merge back.
-- Each model run should save its metrics to `results/<model_name>/` in the same format (see `src/utils/metrics.py`) so results are directly comparable.
+We **do not work directly on `main`**. `main` is always the clean and final version.
+
+
+### Workflow
+
+1. **Update `dev` before starting:**
+
+   ```bash
+   git checkout dev
+   git pull origin dev
+   ```
+
+2. **Create your own branch from `dev`:**
+
+   ```bash
+   git checkout -b yourname-feature
+   ```
+
+   Examples: `arhan-cnn-training`, `arnob-data-prep`, `yolo-tuning`
+
+3. **Work and commit regularly:**
+
+   ```bash
+   git add .
+   git commit -m "Short description of what changed"
+   ```
+
+4. **Push your branch:**
+
+   ```bash
+   git push -u origin <your branch name>
+   ```
+
+5. **Open a Pull Request:**
+   `your-branch → dev` **(never directly to `main`)**.
+   Have at least one teammate review it when possible.
+
+6. **After merging into `dev`:**
+   Test the complete project to ensure everyone's changes work together.
+
+
+## Stay updated with dev branch when working on you own branch :
+
+  ```bash
+  git checkout <your branch name>
+  git pull origin dev
+  ```
+
