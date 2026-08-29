@@ -1,0 +1,17 @@
+# Dataset — stays in Drive/local only, never pushed to GitHub
+data/softcom_dataset/
+
+# Trained models — usually too large for git
+*.pt
+*.h5
+*.onnx
+
+# Python junk
+__pycache__/
+*.pyc
+venv/
+.ipynb_checkpoints/
+
+# OS junk
+.DS_Store
+Thumbs.db

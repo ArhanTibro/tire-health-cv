@@ -1,0 +1,10 @@
+# YOLO11-cls transfer learning config
+# Values are placeholders — tune once data prep (next phase) is done.
+
+model: yolo11n-cls.pt   # nano — fits comfortably in 6GB VRAM; try yolo11s-cls.pt if underfitting
+image_size: 224
+batch_size: 16
+epochs: 50
+optimizer: auto
+num_classes: 5
+class_names: [Healthy, Low_Tread, Zero_Tread, Sidewall_Damaged, Uneven_Wear]

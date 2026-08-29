@@ -1,0 +1,11 @@
+torch>=2.2
+torchvision>=0.17
+ultralytics>=8.3          # YOLO11 classification
+split-folders>=0.5
+scikit-learn>=1.4
+opencv-python>=4.9
+matplotlib>=3.8
+seaborn>=0.13
+pandas>=2.2
+pyyaml>=6.0
+tqdm>=4.66

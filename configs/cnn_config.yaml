@@ -1,0 +1,11 @@
+# From-scratch CNN training config
+# Values are placeholders — tune once data prep (next phase) is done.
+
+image_size: 224
+batch_size: 16
+epochs: 50
+learning_rate: 0.0001
+optimizer: adam
+dropout: 0.3
+num_classes: 5
+class_names: [Healthy, Low_Tread, Zero_Tread, Sidewall_Damaged, Uneven_Wear]
