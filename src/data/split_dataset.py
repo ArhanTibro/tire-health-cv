@@ -43,7 +43,8 @@ def split_data(input_folder, output_folder, train_ratio=0.7, val_ratio=0.15, tes
 
         images = os.listdir(class_path)
         images = [f for f in images if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
-        random.shuffle(images)
+        images.sort()          # ADDED - same starting order on every machine
+        random.shuffle(images)  # now shuffle is truly reproducible everywhere
 
         total = len(images)
         train_count = int(total * train_ratio)
