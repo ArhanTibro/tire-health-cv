@@ -2,6 +2,10 @@
 data/softcom_dataset/
 data/processed/
 
+#notebook - YOLO11n training file
+notebooks/runs
+notebooks/weights
+
 # Trained models — usually too large for git
 *.pt
 *.h5

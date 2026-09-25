@@ -1,0 +1,13 @@
+batch_size: 32
+class_names:
+- healthy
+- low_tread
+- sidewall_damaged
+- uneven_wear
+- zero_tread
+epochs: 50
+freeze: 10
+image_size: 224
+learning_rate: 0.001
+model: yolo11n-cls.pt
+num_classes: 5

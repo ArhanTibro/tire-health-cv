@@ -1,0 +1,6 @@
+batch_size: 32
+epochs: 20
+freeze_backbone: true
+image_size: 224
+learning_rate: 0.001
+model: resnet18

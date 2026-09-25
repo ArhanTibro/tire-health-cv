@@ -1,0 +1,14 @@
+Settings used: {'batch_size': 32, 'epochs': 20, 'freeze_backbone': True, 'image_size': 224, 'learning_rate': 0.001, 'model': 'resnet18'}
+
+Test set results:
+                  precision    recall  f1-score   support
+
+         healthy       0.76      0.83      0.79        23
+       low_tread       0.33      0.17      0.22        12
+sidewall_damaged       0.88      0.78      0.82         9
+     uneven_wear       0.47      0.70      0.56        10
+      zero_tread       0.46      0.46      0.46        13
+
+        accuracy                           0.61        67
+       macro avg       0.58      0.59      0.57        67
+    weighted avg       0.60      0.61      0.60        67
