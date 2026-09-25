@@ -28,8 +28,8 @@ results/     Metrics/plots per model run, for side-by-side comparison
 
 ```bash
 python -m venv venv
-source venv/bin/activate        # or venv\Scripts\activate on Windows
-pip install -r requirements.txt
+venv\Scripts\activate on Windows to activate the environment and for mac : source venv/bin/activate 
+python -m pip install -r requirements.txt
 ```
 
 Then follow `data/README.md` to get the dataset onto disk.
