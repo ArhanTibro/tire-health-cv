@@ -1,0 +1,14 @@
+Settings used: {'batch_size': 16, 'epochs': 30, 'freeze_backbone': False, 'image_size': 224, 'learning_rate': 0.001, 'model_name': 'shufflenet_v2_x1_0'}
+
+Test set results:
+                  precision    recall  f1-score   support
+
+         healthy       0.78      0.78      0.78        23
+       low_tread       0.35      0.50      0.41        12
+sidewall_damaged       1.00      0.67      0.80         9
+     uneven_wear       0.60      0.60      0.60        10
+      zero_tread       0.55      0.46      0.50        13
+
+        accuracy                           0.63        67
+       macro avg       0.66      0.60      0.62        67
+    weighted avg       0.66      0.63      0.64        67

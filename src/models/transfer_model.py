@@ -63,6 +63,29 @@ def build_transfer_model(model_name, num_classes, freeze_backbone=True):
                 param.requires_grad = False
         model.head = nn.Linear(model.head.in_features, num_classes)
 
+    elif model_name == "shufflenet_v2_x1_0":
+        model = models.shufflenet_v2_x1_0(weights="IMAGENET1K_V1")
+        if freeze_backbone:
+            for param in model.parameters():
+                param.requires_grad = False
+        model.fc = nn.Linear(model.fc.in_features, num_classes)
+
+    elif model_name == "regnet_y_400mf":
+        model = models.regnet_y_400mf(weights="IMAGENET1K_V1")
+        if freeze_backbone:
+            for param in model.parameters():
+                param.requires_grad = False
+        model.fc = nn.Linear(model.fc.in_features, num_classes)
+
+    elif model_name == "convnext_tiny":
+        model = models.convnext_tiny(weights="IMAGENET1K_V1")
+        if freeze_backbone:
+            for param in model.parameters():
+                param.requires_grad = False
+        # convnext's classifier is LayerNorm -> Flatten -> Linear, so only swap the last piece
+        in_features = model.classifier[-1].in_features
+        model.classifier[-1] = nn.Linear(in_features, num_classes)
+
     else:
         raise ValueError("Unknown model name: " + model_name)
 

@@ -1,0 +1,6 @@
+batch_size: 16
+epochs: 30
+freeze_backbone: false
+image_size: 224
+learning_rate: 0.001
+model_name: shufflenet_v2_x1_0
